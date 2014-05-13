@@ -8,9 +8,6 @@
 <!-- Include the link to your image (saved in the imgs folder) to display it inline. -->
 
   
-  [![Alt text] (https://github.com/michaelginalick/phase_0_unit_3/blob/master/Users/michaelginalick/phase_0_unit_3/week_7/imgs/sqlzoo_quiz.jpg)]
-
->>>>>>> FETCH_HEAD
-
+![SQL Zoo Results](https://raw.githubusercontent.com/michaelginalick/phase_0_unit_3/master/week_7/imgs/sqlzoo_quiz.jpg)
 
 ### Reflection
