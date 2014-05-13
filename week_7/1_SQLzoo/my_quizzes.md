@@ -12,6 +12,8 @@
     [![Alt text](/Users/michaelginalick/phase_0_unit_3/week_7/imgs/sqlzoo_quiz.jpg.jpg)]
 =======
   [![Alt text](/Users/michaelginalick/phase_0_unit_3/week_7/imgs/sqlzoo_quiz.jpg.jpg)]
+  
+  [![Alt text] (https://github.com/michaelginalick/phase_0_unit_3/blob/master/Users/michaelginalick/phase_0_unit_3/week_7/imgs/sqlzoo_quiz.jpg.jpg)]
 
 >>>>>>> FETCH_HEAD
 
