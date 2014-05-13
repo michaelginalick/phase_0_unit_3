@@ -1,0 +1,13 @@
+mw.loader.implement("jquery.autoEllipsis", ["http://sqlzoo.net/w/resources/jquery/jquery.autoEllipsis.js"], {}, {});
+mw.loader.implement("jquery.checkboxShiftClick", ["http://sqlzoo.net/w/resources/jquery/jquery.checkboxShiftClick.js"], {}, {});
+mw.loader.implement("jquery.highlightText", ["http://sqlzoo.net/w/resources/jquery/jquery.highlightText.js"], {}, {});
+mw.loader.implement("jquery.makeCollapsible", ["http://sqlzoo.net/w/resources/jquery/jquery.makeCollapsible.js"], {"url":{"all":["http://sqlzoo.net/w/resources/jquery/jquery.makeCollapsible.css"]}}, {"collapsible-expand":"Expand","collapsible-collapse":"Collapse"});
+mw.loader.implement("jquery.mw-jump", ["http://sqlzoo.net/w/resources/jquery/jquery.mw-jump.js"], {}, {});
+mw.loader.implement("jquery.placeholder", ["http://sqlzoo.net/w/resources/jquery/jquery.placeholder.js"], {}, {});
+mw.loader.implement("jquery.suggestions", ["http://sqlzoo.net/w/resources/jquery/jquery.suggestions.js"], {"url":{"all":["http://sqlzoo.net/w/resources/jquery/jquery.suggestions.css"]}}, {});
+mw.loader.implement("mediawiki.api", ["http://sqlzoo.net/w/resources/mediawiki.api/mediawiki.api.js"], {}, {});
+mw.loader.implement("mediawiki.searchSuggest", ["http://sqlzoo.net/w/resources/mediawiki/mediawiki.searchSuggest.js"], {}, {"searchsuggest-search":"Search","searchsuggest-containing":"containing..."});
+mw.loader.implement("mediawiki.user", ["http://sqlzoo.net/w/resources/mediawiki/mediawiki.user.js"], {}, {});
+mw.loader.implement("mediawiki.api.watch", ["http://sqlzoo.net/w/resources/mediawiki.api/mediawiki.api.watch.js"], {}, {});
+mw.loader.implement("mediawiki.page.ready", ["http://sqlzoo.net/w/resources/mediawiki.page/mediawiki.page.ready.js"], {}, {});
+mw.loader.implement("mediawiki.page.watch.ajax", ["http://sqlzoo.net/w/resources/mediawiki.page/mediawiki.page.watch.ajax.js"], {}, {"watch":"Watch","unwatch":"Unwatch","watching":"Watching...","unwatching":"Unwatching...","tooltip-ca-watch":"Add this page to your watchlist","tooltip-ca-unwatch":"Remove this page from your watchlist","watcherrortext":"An error occurred while changing your watchlist settings for \"$1\"."});
