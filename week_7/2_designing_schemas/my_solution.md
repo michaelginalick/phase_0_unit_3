@@ -22,7 +22,7 @@
 
 ## Release 4: Design your own Schema
 Description of what you're modeling: 
-![Schema, one-to-one and many-to-many](https://raw.githubusercontent.com/michaelginalick/phase_0_unit_3/master/week_7/imgs/schema.jpg)
+![Schema, one-to-one and many-to-many](https://raw.githubusercontent.com/michaelginalick/phase_0_unit_3/master/week_7/imgs/Schema.jpg)
 <!-- display your one-to-one image inline here -->
 <!-- display your many-to-many image inline here -->
 
