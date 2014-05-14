@@ -10,7 +10,7 @@
 
 ## Release 1: One to Many Schema
 <!-- display your image inline here -->
-
+![One to many](https://raw.githubusercontent.com/michaelginalick/phase_0_unit_3/master/week_7/imgs/one_to_many.jpg)
 
 ## Release 2: One to One Schema
 <!-- display your image inline here -->
