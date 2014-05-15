@@ -3,6 +3,8 @@
 ## Release 0: Users Fields
 <!-- Identify the fields Twitter collects data for -->
 
+  Full Name, user_id, email,url
+
 ## Release 1: Tweet Fields
 <!-- Identify the fields Twitter uses to represent/display a tweet. What are you required or allowed to enter? -->
 
