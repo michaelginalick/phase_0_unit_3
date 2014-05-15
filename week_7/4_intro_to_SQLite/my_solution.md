@@ -60,6 +60,9 @@ sqlite>
 ## Release 3: Add a column
 <!-- paste your terminal output here -->
 
+sqlite> select * from users;
+id          first_name  last_name   email                  created_at           updated_at           nickname  
+----------  ----------  ----------  ---------------------  -------------------  -------------------  ----------
 1           Kimmey      Lin         kimmy@devbootcamp.com  2014-05-15 23:14:33  2014-05-15 23:14:33  Kimchee   
 2           Mike        Ginalick    michael.ginalick@gmai  2014-05-15 23:17:55  2014-05-15 23:17:55            
 sqlite> UPDATE users SET nickname ='Michael' WHERE Id = 2;
@@ -67,7 +70,7 @@ sqlite> select * from users;
 id          first_name  last_name   email                  created_at           updated_at           nickname  
 ----------  ----------  ----------  ---------------------  -------------------  -------------------  ----------
 1           Kimmey      Lin         kimmy@devbootcamp.com  2014-05-15 23:14:33  2014-05-15 23:14:33  Kimchee   
-2           Mike        Ginalick    michael.ginalick@gmai  2014-05-15 23:17:55  2014-05-15 23:17
+2           Mike        Ginalick    michael.ginalick@gmai  2014-05-15 23:17:55  2014-05-15 23:17:55  Michael  
 
 ## Release 4: Change a value
 <!-- paste your terminal output here -->
