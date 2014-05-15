@@ -24,10 +24,18 @@ one user can have many tweets
 
 all the tweets for a certain user id
 
-  SELECT * FROM tweets WHERE user_id = "twitter_user"
+  SELECT * FROM tweets WHERE user_id = "twitter_user";
+  
 the tweets for a certain user id that were made after last Wednesday (whenever last Wednesday was for you)
+  SELECT * FROM tweets WHERE user_id = "twitter_user" AND created_at > "07-MAY-2014";
+  
+  
 all the tweets associated with a given user's twitter handle
+    SELECT * FROM tweets WHERE user_name = "twitter_handel";
+
 the twitter handle associated with a given tweet id
+    SELECT * FROM tweets WHERE id = "twitter_handel";
+  
 
 ## Release 5: Reflection
 <!-- Be sure to add your reflection here!!! -->
