@@ -17,7 +17,7 @@ one user can have many tweets
 ## Release 3: Schema Design
 <!-- Include your image (inline) of your schema -->
 
-
+![twitter](https://raw.githubusercontent.com/michaelginalick/phase_0_unit_3/master/week_7/imgs/Screen Shot 2014-05-15 at 3.57.11 PM.png)
 
 ## Release 4: SQL Statements
 <!-- Include your SQL Statements. How can you make markdown files show blocks of code? -->
