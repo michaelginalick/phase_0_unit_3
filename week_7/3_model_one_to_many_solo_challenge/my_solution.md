@@ -22,5 +22,12 @@ one user can have many tweets
 ## Release 4: SQL Statements
 <!-- Include your SQL Statements. How can you make markdown files show blocks of code? -->
 
+all the tweets for a certain user id
+
+  SELECT * FROM tweets WHERE user_id = "twitter_user"
+the tweets for a certain user id that were made after last Wednesday (whenever last Wednesday was for you)
+all the tweets associated with a given user's twitter handle
+the twitter handle associated with a given tweet id
+
 ## Release 5: Reflection
 <!-- Be sure to add your reflection here!!! -->
