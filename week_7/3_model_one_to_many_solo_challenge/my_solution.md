@@ -8,12 +8,16 @@
 ## Release 1: Tweet Fields
 <!-- Identify the fields Twitter uses to represent/display a tweet. What are you required or allowed to enter? -->
 
-## Release 2: Explain the relationship
-The relationship between `users` and `tweets` is: 
-<!-- because... -->
+  Tweet_id, tweet_text, entities, created_at, user_id, screen_name, name, image
 
+## Release 2: Explain the relationship
+The relationship between `users` and `tweets` is: one to many
+<!-- because... -->
+one user can have many tweets
 ## Release 3: Schema Design
 <!-- Include your image (inline) of your schema -->
+
+
 
 ## Release 4: SQL Statements
 <!-- Include your SQL Statements. How can you make markdown files show blocks of code? -->
