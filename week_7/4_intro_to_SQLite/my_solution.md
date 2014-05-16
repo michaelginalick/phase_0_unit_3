@@ -74,6 +74,23 @@ id          first_name  last_name   email                  created_at           
 
 ## Release 4: Change a value
 <!-- paste your terminal output here -->
+2014-05-15 23:17:55  Michael   
+sqlite> .schema
+CREATE TABLE users (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  first_name VARCHAR(64) NOT NULL,
+  last_name  VARCHAR(64) NOT NULL,
+  email VARCHAR(128) UNIQUE NOT NULL,
+  created_at DATETIME NOT NULL,
+  updated_at DATETIME NOT NULL
+, nickname varchar(64));
+sqlite> UPDATE users SET first_name ='Kimmy Lin', nickname = 'Ninja Coder',updated_at=DATETIME('now')  WHERE Id=1;
+sqlite> select * from users;
+id          first_name  last_name   email                  created_at           updated_at           nickname   
+----------  ----------  ----------  ---------------------  -------------------  -------------------  -----------
+1           Kimmy Lin   Lin         kimmy@devbootcamp.com  2014-05-15 23:14:33  2014-05-16 00:15:35  Ninja Coder
+2           Mike        Ginalick    michael.ginalick@gmai  2014-05-15 23:17:55  2014-05-15 23:17:55  Michael    
+sqlite> 
 
 ## Release 5: Reflect
 <!-- Add your reflection here -->
