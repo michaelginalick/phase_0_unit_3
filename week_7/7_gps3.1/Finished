@@ -1,0 +1,13 @@
+mples, 0 failures
+MG:7_gps3.1 michaelginalick$ vi our_solution.rb
+MG:7_gps3.1 michaelginalick$ rspec our_solution.rb
+The list contains:
+-banana
+-apple
+#<Item:0x007ff1720d2a30>
+#<Item:0x007ff1720d2968>
+No examples found.
+
+
+Finished in 0.00009 seconds
+0 examples, 0 failures
