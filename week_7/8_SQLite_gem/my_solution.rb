@@ -32,12 +32,33 @@ def print_state_reps
 
   five_states.each {|rep, state| puts rep + "-"+ state}
 end
+
+# Create a listing of all of the Politicians and the number of votes they recieved
+# output should look like:  Sen. John McCain - 7,323 votes (This is an example, yours will not return this value, it should just 
+#    have a similar format)
+
+def print_politicaians_votes
+   puts "Politicians and the number of votes they recieved"
+   number_of_votes = $db.execute("SELECT name, SUM(voter_id) FROM congress_members JOIN votes ON (congress_members.id=politician_id) GROUP BY name;")
+   number_of_votes.each {|rep, votes| puts rep + "-"+ votes}
+end
+
+# Create a listing of each Politician and the voter that voted for them
+
+def print_voter_name
+  puts "A listing of each Politician and the voter that voted for them"
+  voter_name = $db.execute("SELECT name, a.first_name FROM congress_members,voters a JOIN voters ON (voters.id=votes_id) GROUP BY name;")
+  voter_name.each {|rep,voter_name| puts rep + "-" voter_name} 
+end
+
 def print_separator
   puts 
   puts "------------------------------------------------------------------------------"
   puts 
 end
 
+
+SELECT name, first_name, last_name FROM congress_members,voters JOIN votes ON (voter_id=voters.id) GROUP BY name;
 
 print_arizona_reps
 
@@ -57,6 +78,9 @@ print_lowest_grade_level_speaker(8.0)
 #
 print_separator
 print_state_reps
+
+print_separator
+print_voter_name
 
 # TODO - Make a method to print the following states representatives as well:
 # (New Jersey, New York, Maine, Florida, and Alaska)

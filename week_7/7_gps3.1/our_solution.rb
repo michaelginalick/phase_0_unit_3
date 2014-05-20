@@ -71,8 +71,7 @@ class List
     end    
     
     def total_price
-        sum = 0
-       # @list.each { |object, object| sum +=  object.quantity * object.price}
+        @list.each { |item_object| puts item_object.total }
     end
 
     def view_contents
@@ -101,6 +100,10 @@ class Item
         @price = price
     end    
     
+
+    def total
+        @quantity * @price
+    end
 end
 
 
