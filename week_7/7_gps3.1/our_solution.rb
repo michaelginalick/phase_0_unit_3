@@ -71,12 +71,17 @@ class List
     end    
     
     def total_price
-        @list.each { |item_object| puts item_object.total }
+        puts "The total price per item is :"
+        @list.map { |item_object| puts item_object.total.to_s + " " + "for" + " " + item_object.quantity.to_s + " " +item_object.name}
+        puts "The grand total is:"
+        sum = 0
+        @list.map do |a| sum += a.total end
+            puts sum
     end
 
     def view_contents
         puts "The list contains:"
-        @list.each {|object| puts "-" + object.name}
+        @list.map {|object| puts "-" + object.quantity.to_s + " " + object.name}
     end    
 
     def add(stuff)
@@ -86,6 +91,7 @@ class List
     def remove(stuff)
         @list.delete(stuff)
     end
+      
 
 end
 
@@ -100,11 +106,17 @@ class Item
         @price = price
     end    
     
-
+        
     def total
         @quantity * @price
     end
+
+    def name
+        @name
+    end  
+ 
 end
+
 
 
 
@@ -112,14 +124,18 @@ end
 
 new_list = List.new()
 
-banana1 = Item.new('banana', 5, 1)
-apple1 = Item.new('apple', 2, 0.5)
+banana = Item.new('banana(s)', 5, 1)
+apple = Item.new('apple(s)', 2, 0.5)
 
-new_list.add(banana1)
-new_list.add(apple1)
+new_list.add(banana)
+new_list.add(apple)
 
-puts new_list.view_contents
+
 puts new_list.total_price
+puts new_list.view_contents
+
+
+
 
 
 

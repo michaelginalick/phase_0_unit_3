@@ -1,18 +1,18 @@
 // U3.W8-9: 
 
 
-// I worked on this challenge [by myself, with: ].
+#// I worked on this challenge [by myself, with: ].
 
-// 2. Pseudocode
-
-
-
-// 3. Initial Solution
+#// 2. Pseudocode
 
 
 
+#// 3. Initial Solution
 
-// 4. Refactored Solution
+
+
+
+#// 4. Refactored Solution
 
 
 

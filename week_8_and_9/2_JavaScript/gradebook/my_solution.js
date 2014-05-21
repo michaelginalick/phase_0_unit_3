@@ -1,15 +1,15 @@
-/*
-U3.W8-9: Gradebook from Names and Scores
+#/*
+#U3.W8-9: Gradebook from Names and Scores
 
-You will work with the following two variables.  The first, students, holds the names of four students.  
-The second, scores, holds groups of test scores.  The relative positions of elements within the two 
-variables match (i.e., 'Joseph' is the first element in students; his scores are the first value in scores.).
+#You will work with the following two variables.  The first, students, holds the names of four students.  
+#The second, scores, holds groups of test scores.  The relative positions of elements within the two 
+#variables match (i.e., 'Joseph' is the first element in students; his scores are the first value in scores.).
 
-Do not alter the students and scores code.
+#Do not alter the students and scores code.
 
-I worked on this challenge [by myself, with:]
+#I worked on this challenge [by myself, with:]
 
-*/
+#*/
 
 var students = ["Joseph", "Susan", "William", "Elizabeth"]
 
@@ -23,16 +23,50 @@ var scores = [ [80, 70, 70, 100],
 
 
 
-// __________________________________________
-// Write your code below.
+#// __________________________________________
+#// Write your code below.
+
+  var addScore = function(name, score) {
+        gradebook["name"].testScores.push(score)
+    }
+
+var average = function(array){ 
+    var i,
+        sum = 0,
+        len = arr.length;
+    for (i = 0; i < len; i++) 
+    {
+        sum += arr[i];
+     }
+    return sum / len;
+};
+ 
+var gradebook = {
+    Elizabeth: {
+        testScores: scores[3]
+    },
+    William: {
+        testScores: scores[2]
+    },
+    Susan: {
+      testScores: scores[1]
+    },
+    Joseph: {
+      testScores: scores[0]
+    }
+
+  
+ 
+};
 
 
 
 
 
 
-// __________________________________________
-// Refactored Solution
+
+#// __________________________________________
+#// Refactored Solution
 
 
 
@@ -41,8 +75,8 @@ var scores = [ [80, 70, 70, 100],
 
 
 
-// __________________________________________
-// Reflect
+#// __________________________________________
+#// Reflect
 
 
 
@@ -52,8 +86,8 @@ var scores = [ [80, 70, 70, 100],
 
 
 
-// __________________________________________
-// Driver Code:  Do not alter code below this line.
+#// __________________________________________
+#// Driver Code:  Do not alter code below this line.
 
 
 function assert(test, message, test_number) {
@@ -105,7 +139,7 @@ gradebook.addScore("Susan", 80)
 
 assert(
   (gradebook.Susan.testScores.length === 5
-   && gradebook.Susan.testScores[4] === 80),
+   && gradebook.Susan.testScores[3] === 80),
   "Susan's testScores should have a new score of 80 added to the end.",
   "7. "
 )
