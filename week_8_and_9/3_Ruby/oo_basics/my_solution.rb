@@ -16,7 +16,6 @@ class Students
     @first_name = first_name
     @scores = scores
     @average = average
-    @students = []
   end
 
 	def average
@@ -43,7 +42,7 @@ end
         i = 0
     while i < len do
         if value == Alex.first_name
-            return 0
+            return i
         end
         i = i + 1
     end
