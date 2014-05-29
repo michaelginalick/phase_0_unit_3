@@ -11,9 +11,13 @@
 
 def is_fibonacci?(num)
 
+		fibonacci = [0,1]
+	while fibonacci.last <= num 
+		fibonacci << fibonacci.last(2).reduce(:+)	
+	end
+
+	fibonacci.include?(num)
 end
-
-
 
 # 4. Refactored Solution
 
@@ -25,7 +29,7 @@ end
 # 1. DRIVER TESTS GO BELOW THIS LINE
 
 
-
+puts is_fibonacci?(8670007398507948658051921)
 
 
 
