@@ -21,20 +21,20 @@ class Rectangle
     (other.height == self.width && other.width  == self.height )
   end
 
-  def rectangle_area
+  def area
   		area = width*height
   end
 
-  def rectangle_perimeter
+  def perimeter
   		perimeter = 2*(width+height)
   end
 
-  def rectangle_diagonal
+  def diagonal
   		diagonal = Math.sqrt((width**2)+(height**2)).to_f
   end
 
-  def rectangle_square?
-  	if height == width 
+  def square?
+  	if @height == @width 
   		return true
   	else
   		return false
@@ -56,10 +56,10 @@ end
 # 1. DRIVER TESTS GO BELOW THIS LINE
 
 rec = Rectangle.new(20,30)
-puts rec.rectangle_area
-puts rec.rectangle_perimeter
-puts rec.rectangle_diagonal
-puts rec.rectangle_square?
+puts rec.area
+puts rec.perimeter
+puts rec.diagonal
+puts rec.square?
 
 
 
