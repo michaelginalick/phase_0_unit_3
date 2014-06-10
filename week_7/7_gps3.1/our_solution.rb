@@ -1,4 +1,4 @@
-# U3.W7: Build an Electronic Grocery List!
+ # U3.W7: Build an Electronic Grocery List!
  
 # Your full names:
 # 1.
