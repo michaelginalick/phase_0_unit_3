@@ -31,6 +31,16 @@ $('.mascot h1').html('Salamanders')
  
 //RELEASE 3: Event Listener
   // Add the code for the event listener here 
+
+ $('img').on('mouseover', function(e){
+     e.preventDefault()
+    $(this).attr('src', 'http://images.nationalgeographic.com/wpf/media-live/photos/000/007/cache/spotted-salamander_721_600x450.jpg')
+  }) 
+
+   $('img').on('mouseleave', function(e){
+     e.preventDefault()
+    $(this).attr('src', 'dbc_logo.jpg')
+  })
  
  
 //RELEASE 4 : Experiment on your own
