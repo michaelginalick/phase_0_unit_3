@@ -47,7 +47,15 @@ $('.mascot h1').html('Salamanders')
  
  
  
- 
+ $( 'body' ).click(function() {
+  $( ".mascot" ).animate({
+    opacity: 0.25,
+    left: "+=50",
+    height: "toggle"
+  }, 5000, function() {
+    // Animation complete.
+  });
+});
  
  
 })  // end of the document.ready function: do not remove or write DOM manipulation below this.
