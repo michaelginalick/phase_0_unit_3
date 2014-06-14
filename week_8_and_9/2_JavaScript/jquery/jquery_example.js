@@ -1,3 +1,7 @@
+ var bodyElement
+ var mascotClass
+ var h1Element
+ var mascotImage
 $(document).ready(function(){
  
 //RELEASE 0: 
@@ -8,11 +12,21 @@ $('body').css({'background-color': 'pink'})
 //RELEASE 1:
   //Add code here to select elements of the DOM 
 
-   var bodyElement = $('body')
+   bodyElement = $('body');
+   mascotClass = $('.mascot');
+   h1Element = $('h1');
+   mascotImage = $('img');
+
  
  
 //RELEASE 2: 
   // Add code here to modify the css and html of DOM elements
+
+$('h1').css({'color': 'blue'})
+$('h1').css({'border-style': 'solid'})
+$('h1').css({'visibility': 'visible'})
+$('.mascot h1').html('Salamanders')
+
  
  
 //RELEASE 3: Event Listener
