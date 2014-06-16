@@ -1,0 +1,5 @@
+PATH=$PATH:q
+:q
+q
+^G
+/usr/local/bin

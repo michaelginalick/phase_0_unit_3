@@ -1,6 +1,4 @@
-// U3.W8-9: Gradebook from Names and Scores
 
-// I worked on this challenge [by myself, with:]
 
 // These are the votes cast by each student. Do not alter these objects here.
 var votes = {
@@ -71,9 +69,32 @@ var officers = {
 
 
 
+var calc = function(votes) {
+    for (ballots in votes) {
+        for (office in votes[ballots]) {
+            voteCount[office][votes[ballots][office]] = ++voteCount[office][votes[ballots][office]] || 1;
+        }
+    }
+}
+
+calc(votes);
 
 
 
+
+var max = function(obj) {
+    for (ballots in obj) {
+        var biggest = 0
+        for (name in obj[ballots]) {
+            if (obj[ballots][name] > biggest) {
+                officers[ballots] = name;
+                biggest = obj[ballots][name];
+            }
+        }
+    }
+}
+
+max(voteCount);
 
 // __________________________________________
 // Refactored Solution
