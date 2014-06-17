@@ -1,27 +1,272 @@
+
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap 101 Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-    <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <title>Setting Up and Understanding Jekyll</title>
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-  </head>
-  <body>
-    <h1>Hello, world!</h1>
+    <!-- Bootstrap core CSS -->
+    <link href="/css/bootstrap.css" rel="stylesheet">
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
-  </body>
+    <!-- Add custom CSS here -->
+    <link href="/css/blog-post.css" rel="stylesheet">
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="icon" type="image/x-icon" href="/nut_and_bolt.ico">
+
+    
+</head>
+
+    <body>
+
+    
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/"><i class="fa fa-cog fa-spin"></i> TONY LEUNG | DBC</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="/bloglist/">Blogs</a>
+                </li>
+                <li><a href="/work/">Work</a>
+                </li>
+                <li><a href="/index.html#about">About</a>
+                </li>
+                <li><a href="/index.html#contact" >Contact</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+
+
+    <div class="container">
+    	<div class="row">
+        <div class="col-lg-8">
+    			<!-- the actual blog post: title/author/date/content -->
+<h1>Setting Up and Understanding Jekyll</h1>
+<p class="lead">by <a href="index.html">Tony Leung</a>
+</p>
+<hr>
+<p>
+    <span class="glyphicon glyphicon-time"></span> Posted on Jun 14, 2014</p>
+<hr>
+<img src="/img/jekyll.jpg" class="img-responsive">
+<hr>
+<p class="lead">
+    <p>Though I havent mastered using Jekyll yet, I wanted to spend some time today to build a quick how to on setting up Jekyll and explain the directory structure.</p>
+
+<h4 id="prerequisites-for-using-jekyll">Prerequisites for using Jekyll</h4>
+
+<ol>
+  <li>
+    <p>Install Ruby</p>
+  </li>
+  <li>
+    <p>Install RubyGems</p>
+  </li>
+</ol>
+
+<h4 id="before-we-get-started-working-with-jekyll-you-need-to-install-it">Before we get started working with Jekyll, you need to install it.</h4>
+
+<p>1.Open up terminal and install Jekyll with the following command.</p>
+
+<div class="highlight"><pre><code class="ruby"><span class="n">gem</span> <span class="n">install</span> <span class="n">jekyll</span>
+</code></pre></div>
+
+<p><img src="/img/jekyllinstall.png" alt="" /></p>
+
+<p><br /></p>
+
+<p>2.Create a new site using jekyll</p>
+
+<div class="highlight"><pre><code class="ruby"><span class="n">jekyll</span> <span class="kp">new</span> <span class="n">testsite</span>
+</code></pre></div>
+
+<p><img src="/img/jekyllnewsite.png" alt="" /></p>
+
+<p><br /></p>
+
+<p>3.Change directory to the new site and show its content.</p>
+
+<div class="highlight"><pre><code class="ruby"><span class="n">cd</span> <span class="n">testsite</span>
+<span class="n">ls</span> <span class="o">-</span><span class="n">a</span>
+</code></pre></div>
+
+<p><img src="/img/jekyllcdlist.png" alt="" /></p>
+
+<p><br /></p>
+
+<h4 id="the-directory-listing-is-the-root-of-your-new-site-using-jekyll---let-me-explain-what-each-directory-and-file-is">The directory listing is the root of your new site using Jekyll.   Let me explain what each directory and file is.</h4>
+
+<h5 id="gitignore">.gitignore</h5>
+<p>This file is used for git so you can exclude directories or files from getting pushed to GitHub.  If you look in the file, it will show _site.   When you run the Jekyll web service, it will compile your blog postings and dump everything into the _site directory.   GitHub doesnt need this directory since the site is assembled on the GitHub server automatically.   </p>
+
+<hr />
+
+<h5 id="configyml">_config.yml</h5>
+<p>This is the configuration file.  You use this file to add customizations, such as what type of syntax highlighting to use, number of blogs to paginate per page, and many other options.  <a href="http://jekyllrb.com/docs/configuration/">Click here</a> for more information about this page.</p>
+
+<hr />
+
+<h5 id="includes">_includes</h5>
+<p>This directory is used to place any type of HTML code you think all your pages will need.  When I say HTML code, these files can be the header, footer, head, comment.   So if your pages are going to have the same navigational bars, build a HTML file that contains the header tags, nav tags, and maybe an ordered list of navigation links.</p>
+
+<p>Example</p>
+
+<p><img src="/img/sitebaseurl.png" alt="" /></p>
+
+<p>Now include this file in your main template so that every single page will automatically have this header. (I will get into how to include the file in a bit)</p>
+
+<p>What is that “site.baseurl” syntax?  This is the Liquid syntax that you can use to generate your pages.   Reason I am using this is so that I can move back up to the root of the site and then point to the right html files for my links. The variable “site” is a reserved word for Jekyll.  When you call site, Jekyll will look in the _config.yml file and find the appropriate word that matches.   If you look in the _config.yml file, what do you see?</p>
+
+<p><img src="/img/configyml.png" alt="" /></p>
+
+<p>Notice that baseurl is “”.  So using site.baseurl will bring me back to the root.  <a href="http://jekyllrb.com/docs/variables/">Click here</a> if you like to read up about Jekyll variables.</p>
+
+<hr />
+
+<h5 id="layouts">_layouts</h5>
+<p>This directory is where you place all your Jekyll templates.  CD to the _layout directory and open up default.html.  </p>
+
+<p><img src="/img/defaulthtml.png" alt="" /></p>
+
+<p>Notice that there isn’t a lot of HTML tags on the page.   But there are three include sytax. If you want to include a file from the _include directory such as the head.html file, simply type in “include head.html” between the curly brace and percentage signs.</p>
+
+<p>Doing this will include all the HTML markup from the head.html file.   The other 2 includes does the same thing but with header and footer HTML.</p>
+
+<p>Now open up the post.html file.</p>
+
+<p><img src="/img/posthtml.png" alt="" /></p>
+
+<p>At the top of the page you’ll see </p>
+
+<div class="highlight"><pre><code class="ruby"><span class="o">---</span>
+<span class="ss">layout</span><span class="p">:</span> <span class="n">default</span>
+<span class="o">---</span>
+</code></pre></div>
+
+<p>Jekyll uses this header to determine which layout template to use.   So for this example, default.html is the template for this post.</p>
+
+<p>Next when you look more you see</p>
+
+<div class="highlight"><pre><code class="ruby"><span class="n">page</span><span class="o">.</span><span class="n">title</span> 
+<span class="n">page</span><span class="o">.</span><span class="n">date</span>
+<span class="n">page</span><span class="o">.</span><span class="n">author</span>
+<span class="n">page</span><span class="o">.</span><span class="n">meta</span>
+<span class="n">content</span>
+</code></pre></div>
+
+<p>The variable “page” is also a reserved word for Jekyll.  The page refers to the Markdown files you create in the _post directory (explain later).   When you type page.date, Jekyll will look at the page passed to the post.html file look at the title tag for example, and display the title information in place of the Liquid markup.  </p>
+
+<p>The variable “content” is also another reserved word.  The content contains the rendered content of the post you pass to the page.</p>
+
+<hr />
+
+<h5 id="posts">_posts</h5>
+<p>This directory is your main directory for posting your blogs via Markdown.  If you CD into the _posts directory you will see a sample markdown file.    Open it up.  You will see the following file.   </p>
+
+<p><img src="/img/samplemarkdown.png" alt="" /></p>
+
+<p>You’ll notice up top </p>
+
+<div class="highlight"><pre><code class="ruby"><span class="o">---</span>
+<span class="ss">layout</span><span class="p">:</span> <span class="n">post</span>
+<span class="ss">title</span><span class="p">:</span>  <span class="s2">&quot;Welcome to Jekyll!&quot;</span>
+<span class="ss">date</span><span class="p">:</span>   <span class="mi">2014</span><span class="o">-</span><span class="mo">06</span><span class="o">-</span><span class="mi">14</span> <span class="mi">14</span><span class="p">:</span><span class="mi">48</span><span class="p">:</span><span class="mi">49</span>
+<span class="ss">categories</span><span class="p">:</span> <span class="n">jekyll</span> <span class="n">update</span>
+<span class="o">---</span>
+</code></pre></div>
+
+<p>Again the layout tells Jekyll which layout file to use which is the post.html file in the _layout directory.   The title is the string “Welcome to Jekyll!” that you pass into post.html (Remember post.html had page.title).   The variable date and categories are also availble to use in the post.html layout file.  Everything underneath the ‘—’ will be part of the “content” variable in post.html.   You’ll also notice the “highlight ruby” markup. That is the Pygment based syntax highlighting that is suppose to work with Jekyll (I’ll save this for another post).   Everything else in the content is just plain markdown.  Here’s a <a href="http://daringfireball.net/projects/markdown/">link to some markdown</a> help if you need further understanding.</p>
+
+<hr />
+
+<h5 id="aboutmd">about.md</h5>
+<p>Not really necessary. Its just a generic theme</p>
+
+<hr />
+
+<h5 id="css">css</h5>
+<p>save your css files here</p>
+
+<hr />
+
+<h5 id="feedxml">feed.xml</h5>
+<p>RSS feed file generated by Jekyll</p>
+
+<hr />
+
+<h5 id="indexhtml">index.html</h5>
+<p>Main home page sample that uses the default layout and provides an index of the post you created in the _posts directory.</p>
+
+<hr />
+
+<p><strong>IMPORTANT</strong>
+If you make any new directories on your site and want to use Liquid syntax.  Jekyll wont recognize it unless you create a new directory and write the Liquid syntax in an index.html file.   From my experience, Jekyll did not work when I used a different name other than index.html.  If I’m wrong, someone please let me know.</p>
+
+<p>Now that I’ve gone through all the files and directories on a Jekyll web site, I hope this will help you start customizing your pages.   My recommendation is to first build a few blogs using the generic templates first.  Then afterwards, build your own custom layout or use a front-end framework such as <a href="http://getbootstrap.com/">Bootstrap</a>.   </p>
+
+<p>I hope this blog helps and have fun using Jekyll.</p>
+
+
+</p>
+<hr>
+
+  				<!-- the comment box -->
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'tleung999githubio'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+  				<footer>
+    <div class="row">
+        <div class="col-lg-12">
+            <p>Copyright &copy; Tony Leung </p>
+            <div id="social">
+                <a href="https://github.com/tleung999"><i class="fa fa-github-square"></i></a>
+                <a href="https://twitter.com/tleung75"><i class="fa fa-twitter-square"></i></a>
+                <a href="https://www.linkedin.com/profile/view?id=225539140&authType=name&authToken=2VdK&locale=en_US&pvs=pp&trk=ppro_viewmore"><i class="fa fa-linkedin-square"></i></a>
+                <a href="http://google.com/+TonyLeung999"><i class="fa fa-google-plus-square"></i></a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+    		</div>
+    	</div>
+    </div>
+    <!-- JavaScript -->
+<script src="/js/jquery-1.10.2.js"></script>
+<script src="/js/bootstrap.js"></script>
+
+    </body>
 </html>
