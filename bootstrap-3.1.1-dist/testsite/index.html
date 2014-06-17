@@ -1,20 +1,127 @@
----
-layout: default
----
 
-<div class="home">
+<!DOCTYPE html>
+<html lang="en">
 
-  <h1>Posts</h1>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-  <ul class="posts">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
-        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-      </li>
-    {% endfor %}
-  </ul>
+    <title>TONY LEUNG | DBC</title>
 
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+    <!-- Bootstrap Core CSS -->
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet" type="text/css">
 
-</div>
+    <!-- Fonts -->
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+
+    <!-- Custom Theme CSS -->
+    <link href="./css/grayscale.css" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="nut_and_bolt.ico">
+
+</head>
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-custom">
+
+    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand" href="#page-top">
+                    <i class="fa fa-cog fa-spin"></i>  <span class="light">TONY LEUNG</span> | DBC
+                </a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                <ul class="nav navbar-nav">
+                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="./bloglist/"><i class="fa fa-road"></i>BLOGS</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="./work/index.html"><i class="fa fa-desktop"></i>Work</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#about"><i class="fa fa-user"></i>About</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#contact"><i class="fa fa-comment-o"></i>Contact</a>
+                    </li>
+
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <section class="intro">
+        <div class="intro-body">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <h1 class="brand-heading">TONY LEUNG @DBC</h1>
+                        <p class="intro-text">Coding / Photography / Fun </p>
+                        <div class="page-scroll">
+                            <a href="#about" class="btn btn-circle">
+                                <i class="fa fa-angle-down animated"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>About Me</h2>
+                <p>I was born in Hong Kong and moved to the states when I was two, and have lived in San Francisco ever since. I recently worked at IDG Consumer & SMB managing the lab for PCWorld and Macworld building benchmarks to measure system performance. I have a wonderful wife and two kids that love to drain the energy from us each day. Some of my hobbies are photography, hiking, and working/riding any type of two wheel vehicle. </p>
+                <p>I am entering Dev Bootcamp to help jumpstart my career back into Web Development. I used to work in web development during the Web 1.0 days, and things have certainly changed quite a bit. </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="content-section text-center">
+        <div class="contact-section">
+            <div class="container">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <h2>Contact Me</h2>
+                <p>tleung999@yahoo.com</p>
+                <ul class="list-inline banner-social-buttons">
+                    <li><a href="https://www.linkedin.com/profile/view?id=225539140&authType=name&authToken=2VdK&locale=en_US&pvs=pp&trk=ppro_viewmore" class="btn btn-default btn-lg"><i class="fa fa-linkedin-square"></i> <span class="network-name">LinkedIn</span></a>
+                    </li>
+                    <li><a href="https://twitter.com/tleung75" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
+                    </li>
+                    <li><a href="https://github.com/tleung999" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
+                    </li>
+                    <li><a href="https://plus.google.com/+TonyLeung999/posts" class="btn btn-default btn-lg"><i class="fa fa-google-plus fa-fw"></i> <span class="network-name">Google+</span></a>
+                    </li>
+                </ul>
+                </div>
+            </div>
+        </div>
+        <div id="filler"></div>
+    </section>
+
+    <!-- Core JavaScript Files -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="./js/grayscale.js"></script>
+
+</body>
+
+</html>
