@@ -12,14 +12,16 @@
 $var_1 = 22
  
 class Person
+  def initialize(var_5 = VAR_6)
+    @var_3="Law of Demeter"  
+  end
+
   @@var_2
   VAR_6 = "Ruby"
  
   attr_reader :var_3, :var_4
  
-  def initialize(var_5 = VAR_6)
-    @var_3="Law of Demeter"  
-  end
+  
  
   def do_stuff(var_7=[1,2,3])
     var_7.each do |var_8|
