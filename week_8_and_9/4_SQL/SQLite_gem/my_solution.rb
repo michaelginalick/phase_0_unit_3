@@ -16,11 +16,39 @@ end
 
 def print_longest_serving_reps(minimum_years)  #sorry guys, oracle needs me, i didn't finish this!
   puts "LONGEST SERVING REPRESENTATIVES"
-  puts $db.execute("SELECT name FROM congress_members WHERE years_in_congress > #{minimum_years}")
+  longest_reps =  $db.execute("SELECT name,years_in_congress FROM congress_members WHERE years_in_congress > #{minimum_years}")
+  longest_reps.each { |rep,year| puts rep + "-"+ year.to_s}
 end
 
-def print_lowest_grade_level_speakers
+def print_lowest_grade_level_speaker(low_grade)
   puts "LOWEST GRADE LEVEL SPEAKERS (less than < 8th grade)"
+  lowest_grade = $db.execute("SELECT name FROM congress_members WHERE grade_current < #{low_grade}")
+  lowest_grade.each { |rep| puts rep}
+end
+
+def print_state_reps
+  puts "Representatives for New Jersey, New York, Maine, Florida, and Alaska"
+  five_states = $db.execute("SELECT name,location FROM congress_members WHERE location = 'NJ' OR location = 'NY' OR location = 'FL' OR location = 'AL' OR location = 'ME' ")
+
+  five_states.each {|rep, state| puts rep + "-"+ state}
+end
+
+# Create a listing of all of the Politicians and the number of votes they recieved
+# output should look like:  Sen. John McCain - 7,323 votes (This is an example, yours will not return this value, it should just 
+#    have a similar format)
+
+def print_politicaians_votes
+   puts "Politicians and the number of votes they recieved"
+   number_of_votes = $db.execute("SELECT name, SUM(voter_id) FROM congress_members JOIN votes ON (congress_members.id=politician_id) GROUP BY name;")
+   number_of_votes.each {|rep, votes| puts rep + "-"+ votes}
+end
+
+# Create a listing of each Politician and the voter that voted for them
+
+def print_voter_name
+  puts "A listing of each Politician and the voter that voted for them"
+  voter_name = $db.execute("SELECT name, a.first_name FROM congress_members,voters a JOIN voters ON (voters.id=votes_id) GROUP BY name;")
+  voter_name.each {|rep,voter_name| puts rep + "-" voter_name} 
 end
 
 def print_separator
@@ -29,6 +57,8 @@ def print_separator
   puts 
 end
 
+
+SELECT name, first_name, last_name FROM congress_members,voters JOIN votes ON (voter_id=voters.id) GROUP BY name;
 
 print_arizona_reps
 
@@ -39,8 +69,18 @@ print_longest_serving_reps(35)
 # output should look like:  Rep. C. W. Bill Young - 41 years
 
 print_separator
-print_lowest_grade_level_speakers 
+print_lowest_grade_level_speaker(8.0)
+
 # TODO - Need to be able to pass the grade level as an argument, look in schema for "grade_current" column
+
+
+
+#
+print_separator
+print_state_reps
+
+print_separator
+print_voter_name
 
 # TODO - Make a method to print the following states representatives as well:
 # (New Jersey, New York, Maine, Florida, and Alaska)
