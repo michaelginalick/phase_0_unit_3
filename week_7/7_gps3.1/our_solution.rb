@@ -40,8 +40,7 @@
 # U3.W7: Build an Electronic Grocery List!
  
 # Your full names:
-# 1. Antonio Perez
-# 2. Michael Ginalick
+
  
 # User Stories (As many as you want. Delete the statements you don't need)
 

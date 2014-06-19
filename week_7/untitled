@@ -1,0 +1,128 @@
+
+  # U3.W7: Build an Electronic Grocery List!
+ 
+# Your full names:
+# 1.
+# 2.
+ 
+# User Stories (As many as you want. Delete the statements you don't need)
+# As a user, I want to add items to list, remove items from list
+# As a user, I want to view the contents of the list
+# As a user, I want to view the name and the price of each item
+# As a user, I want to create an itemized list (price, quanity) to view the total
+# As a user, I want to 
+ 
+# Pseudocode
+# create list class, create items class
+# write methods to add, remove, create total
+# 
+# 
+# 
+# 
+ 
+ 
+# Your fabulous code goes here....
+
+
+#GROCERY LIST
+
+#Release 0: User Stories
+#With your partner, talk about what you would like to do with your grocery list. Start each statement with 
+#"As a user, I want to ..." These are what we call "user stories."
+
+#Release 1: Pseudocode
+#What objects, classes, and methods will you need to do each of the things you identified in your user stories?
+
+#Release 2: Write Driver Code
+#Translate your pseudocode into driver code. Write driver code at the bottom (to call the method on the object).
+
+
+
+# U3.W7: Build an Electronic Grocery List!
+
+ 
+ 
+# Your fabulous code goes here....
+
+class List 
+    
+    def initialize 
+        @list = []
+    end
+    
+    def add(items)
+        @list << items
+    end
+    
+    def remove(items)
+        @list.delete(items)
+    end
+
+    def view_contents
+        puts "The list contains:"
+        @list.map{|item| item.name + "" + item.quantity.to_s + "" + item.name}
+    end
+    
+    def total_price
+        puts "The total price per item is:"
+        @list.map{|item_object| puts item_object.total.to_s}
+        puts "The grand total is:"
+        sum = 0
+        @list.map do |list_item| sum += list_item.total end
+        puts sum
+    end
+    
+end
+        
+class Item
+    attr_reader :name, :quantity, :price
+    
+    def initialize(name, quantity, price)
+        @name = name
+        @quantity = quantity
+        @price = price
+    end
+    def name
+        @name
+    end
+    def total
+        @quantity * @price
+    end
+    
+    
+    
+end
+
+
+
+# DRIVER CODE GOES HERE. 
+#create list
+new_list = List.new()
+#create item
+pear = Item.new('pear(s)',5,0.35)
+#add item to list
+new_list.add(pear)
+
+
+puts new_list.total_price
+puts new_list.view_contents
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# DRIVER CODE GOES HERE. 
+ 
+ 
+ 
