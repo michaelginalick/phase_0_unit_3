@@ -6,22 +6,22 @@
 
 # 1. Original Solution
 
-def valid_triangle?(a, b, c)
+def valid_triangle?(a,b,c)
  if a != 0 && b != 0 && c != 0
         if a >= b
-          largest = a
-          sum = b
+          largest = a   
+          sum = b       
             else largest = b
           sum = a
         end
     
-        if c > largest
-          sum += largest
-          largest = c
+        if c > largest  
+          sum += largest  
+          largest = c      
            else sum = c
         end
 
-        if sum > largest
+        if sum >= largest 
           return "true"
            else return "false"
         end
@@ -31,7 +31,12 @@ def valid_triangle?(a, b, c)
   end
 end
 
+#3,4,9 
 
+#7>9  12>4   12>3
+
+
+#{ [[1, 1, 2.01], [50, 70, 200]]
 # 2. Answer the question for each bug
 
 # --- Bug 1 ---

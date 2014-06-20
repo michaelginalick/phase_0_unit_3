@@ -39,6 +39,7 @@ end
 # 1. DRIVER TESTS/ASSERT STATEMENTS GO BELOW THIS LINE
 
 new_person = Person.new()
+new_person.do_stuff
 
 
 
