@@ -23,13 +23,10 @@ end
 
 
 
-
-
-
 # 1. DRIVER TESTS GO BELOW THIS LINE
 
 
-puts is_fibonacci?(8670007398507948658051921)
+puts is_fibonacci?(8)
 
 
 
